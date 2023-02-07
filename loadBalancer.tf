@@ -11,12 +11,12 @@ resource "aws_security_group" "yvn_intern_security_group_load_balancer" {
     cidr_blocks      = [var.cidr-block-route_tb]
   }
 
-#   ingress {
-#     from_port        = 80
-#     to_port          = 80
-#     protocol         = "tcp"
-#     cidr_blocks      = [var.cidr-block-route_tb]
-#   }
+  ingress {
+    from_port        = 80
+    to_port          = 80
+    protocol         = "tcp"
+    cidr_blocks      = [var.cidr-block-route_tb]
+  }
 
   egress {
     from_port        = 0
